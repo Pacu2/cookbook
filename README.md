@@ -4,6 +4,9 @@ Sample project used as an introduction to the GraphQL.
 
 *PROJECT SETUP*
 
+If you are using docker, simply run `docker-compose up` and move directly to the step 8.
+
+
 1. Using Python 3.8 create a new virtualenv (3.7-3.9 might work, haven't tested)
 2. Install all dependencies
 `pip install -r requirements.txt`
