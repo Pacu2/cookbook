@@ -1,0 +1,18 @@
+web:
+  build: .
+  volumes:
+    - .:/cookbook
+web_migrate:
+  extends:
+    service: web
+  command: python manage.py migrate
+web_loaddata:
+  extends:
+    service: web
+  command: python manage.py loaddata ingredients
+web_run:
+  extends:
+    service: web
+  command: python manage.py runserver 0.0.0.0:8000
+  ports:
+    - "8000:8000"
